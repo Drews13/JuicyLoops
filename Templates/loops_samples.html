@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/styles/styles.css">
+        <link rel="stylesheet" href="/styles/loops_samples_styles.css">
+        <title>
+	    	JuicyLoops
+        </title>
+    </head>
+    <body>
+
+	{% include'header.html' %}	
+
+    <div id="catalog">
+        <h1 class="catalog_title">Free Music Loops&Samples</h1>
+        <p>
+            The free loops, samples and sounds listed here have been kindly uploaded by other users. If you use any of these loops please leave your comments. If you upload your loop, be ready that it can be used by anyone.
+        </p> 
+        <div class="header_cont">Search for Loops</div>
+        {% include 'search_for_loops_form.html' %}
+
+        {% include 'loop_cont_form.html' %}
+
+        <div class="tags">
+            Tags: 145bpm | Trap Loops | Piano | Key:Am
+        </div>
+        <div class="switch_page">Loops 1-10<div class="page_links"></div></div>
+    </div>
+
+    {% include'footer.html' %}
+
+	</body>
+</html>

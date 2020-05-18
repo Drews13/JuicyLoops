@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/styles/styles.css">
+        <link rel="stylesheet" href="/styles/myaccount_styles.css">
+        <title>
+	    	JuicyLoops
+        </title>
+    </head>
+    <body>
+
+	{% include'header.html' %}	
+
+    <div id="account_page">
+    	<div id="account_page_content">
+            <div id="account_title">
+                <h1>Login</h1>
+            </div>   
+            <div id="account_content">
+                {% include 'myaccount_sign_form.html' %}    
+                {% include 'myaccount_reg_form.html' %}
+            </div>
+        </div>
+    </div>
+
+    {% include 'footer.html' %}
+
+	</body>
+</html>

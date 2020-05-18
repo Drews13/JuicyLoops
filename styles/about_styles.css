@@ -1,0 +1,24 @@
+#about_info
+{
+	margin: 20px 62px;
+	display: block;
+	min-height: calc(100vh - 254.4px);
+}
+
+.about_title
+{
+	font-size: 1.3rem;
+	line-height: 1.7rem;
+    margin: 0 0 0.5rem 0;
+}
+
+#about p
+{
+	padding-bottom: 1rem;
+}
+
+ul
+{
+	padding-left: 30px;
+	padding-bottom: 10px;
+}

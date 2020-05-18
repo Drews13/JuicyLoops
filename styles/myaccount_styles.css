@@ -1,0 +1,98 @@
+#account_page_content
+{
+    background: #FFFFFF;
+    padding: 0px 30px 30px; 
+    min-height: calc(100vh - 244.4px);
+}
+
+#account_title
+{
+    padding: 20px 0px 20px;
+}
+
+#account_title h1
+{
+    padding-bottom: 20px;
+    border-bottom: 1px solid #dfdfdf;
+    font-size: 21px;
+    font-family: proxima-nova-medium,sans-serif;
+}
+
+#account_content
+{
+    padding-top: 20px;
+    font-size: 0;
+}
+
+#account_content form
+{
+    width: 48%;
+    vertical-align: top;
+    font-family: Verdana,sans-serif;
+    display: inline-block;
+}
+
+#regiter_form
+{
+    padding: 0px 0px 0px 40px
+}
+
+#account_content h3
+{
+    line-height: 160%;
+    font-size: 16px;
+    font-family: proxima-nova-medium,sans-serif;
+}
+
+.reg
+{
+    padding: 10px 0;
+}
+
+.reg_input
+{
+    padding: 10px 0px;
+}
+
+.in
+{
+    font-size: 0;
+    padding: 0 0 5px;
+}
+
+.in label
+{
+    width: 30%;
+    display: inline-block;
+}
+
+.input_box
+{
+    width: 70%;
+    display: inline-block;
+}
+
+.input_box input
+{
+    width: 100%;
+    border: 1px solid #dfdfdf;
+    padding: 8px;
+    height: 36px;
+}
+
+#btn_login, #btn_register
+{
+    color:#FFFFFF;
+    width: 100%;
+    height: 50px;
+    font-size: 18px;
+    background-color: #13ce6b;
+    border: 0;
+}
+
+.cont
+{
+    padding: 20px;
+    border: 1px solid #dfdfdf;
+    background-color: #fff;
+}

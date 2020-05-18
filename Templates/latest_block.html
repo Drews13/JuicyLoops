@@ -1,0 +1,14 @@
+<div class="latest_block">
+    <div class="block_header">{{title}}</div>
+        <div class="block_list">
+        <ul>
+            {% if title == 'Latest Loops Comments' %}
+                {% for comment in comments %}
+                    <li>
+                        {{comment.author}} commented on {{comment.loop}} by {{comment.musician}}
+                    </li>   
+                {% endfor %}
+            {% endif %}
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,87 @@
+body
+{
+    background-image: url(../img/piano3.jpg);
+    background-attachment: fixed;
+}
+
+.content
+{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    background: #FFFFFF;
+    width:100%;
+    padding-top: 90px; 
+    margin-left: 0; 
+    min-height: calc(100vh - 114.4px);
+}
+
+@media only screen and (min-width: 767px)
+{
+    .content
+    {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(3,1fr);
+        background: #FFFFFF;
+        width:50%; 
+        margin-left: 50%; 
+        padding-top: 90px;
+        min-height: calc(100vh - 114.4px);
+    }
+}
+
+.welcome
+{
+    background: rgba(0,0,0,0.2);
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+h1.home_title 
+{
+    color: #000000;
+    padding: 0 0 0.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 2rem;
+}
+
+h2.home_title2 
+{
+    color: #000000;
+    opacity: .5;
+    padding: 0 0 0.5rem;
+    font-size: 1.2rem;
+    line-height: 1.3rem;
+    font-weight: bold;
+    clear: left;
+}
+
+.latest_block
+{
+    margin: 0px 10px;
+}
+
+.block_header
+{
+    color: #fff;
+    background-color: #000;
+    font-size: 1.2rem;
+    padding: 0.7rem;
+    font-weight: bold;
+}
+
+.block_list
+{
+    padding: 5px;
+    border: solid 2px #000;
+    font-size: 0.9rem;
+}
+
+.block_list li
+{
+    list-style-type: none;
+    padding: 0px 0px 5px 10px;
+    margin: 5px 0px;    
+    border-bottom: 1px solid #ccc; 
+}
