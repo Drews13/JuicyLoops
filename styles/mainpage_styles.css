@@ -8,12 +8,11 @@ body
 {
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(3,1fr);
     background: #FFFFFF;
     width:100%;
     padding-top: 90px; 
     margin-left: 0; 
-    min-height: calc(100vh - 114.4px);
+    min-height: calc(100vh - 214.4px);
 }
 
 @media only screen and (min-width: 767px)
@@ -22,12 +21,11 @@ body
     {
         display: grid;
         grid-template-columns: repeat(3,1fr);
-        grid-template-rows: repeat(3,1fr);
         background: #FFFFFF;
         width:50%; 
         margin-left: 50%; 
         padding-top: 90px;
-        min-height: calc(100vh - 114.4px);
+        min-height: calc(100vh - 214.4px);
     }
 }
 
@@ -35,6 +33,7 @@ body
 {
     background: rgba(0,0,0,0.2);
     font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+    height: 50%;
 }
 
 h1.home_title 

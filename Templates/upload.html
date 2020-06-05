@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/styles/styles.css">
+        <link rel="stylesheet" href="/styles/profile_styles.css">
+        <title>
+	    	JuicyLoops
+        </title>
+    </head>
+    <body>
+
+	{% include'header.html' %}
+
+    <div class="wrapper">
+        <div class="menu">
+            <a href="profile.php?account_id={{user_id}}">My Profile</a>
+            <a href="mysettings.php">My Settigns</a>
+            <a href="upload.php">Upload</a>
+        </div>
+        <h1 class="prof_title">Upload your loop</h1>
+        <form action="upload.php" method="post" enctype="multipart/form-data" class="prof_edit">
+            <label>Name</label>
+            <input type="text" class="edit" name="name">
+            <label>Description</label>
+            <input type="text" class="edit" name="description">
+            <label>Category</label>
+            {% include'category_select.html' %}
+            <label>Bpm</label>
+            <input type="text" class="edit" name="bpm">
+            <label>Key</label>
+            {% include 'select_key.html'%}
+            <label>Choose wav file</label>
+            <input type="file" name="loop">
+            {% if err %}
+                <p>{{err}}</p>
+            {% endif %}
+            <button type="submit" name="submit" class="edit_button">Upload loop</button>
+        </form>
+    </div>
+
+    {% include'footer.html' %}
+
+	</body>
+</html>

@@ -5,9 +5,21 @@
             {% if title == 'Latest Loops Comments' %}
                 {% for comment in comments %}
                     <li>
-                        {{comment.author}} commented on {{comment.loop}} by {{comment.musician}}
+                        <a href="profile.php?account_id={{comment.author_id}}">{{comment.author_name}} </a>
+                        commented on 
+                        <a href="loop_page.php?loop_id={{comment.sample_id}}"> {{comment.sample_name}} </a>
+                        by 
+                        <a href="profile.php?account_id={{comment.musician_id}}"> {{comment.musician_name}}</a>
                     </li>   
                 {% endfor %}
+            {% else %} 
+                {% for loop in loops %}
+                    <li>
+                        <a href="profile.php?account_id={{loop.author_id}}">{{loop.author_name}} </a>
+                        posted 
+                        <a href="loop_page.php?loop_id={{loop.id}}"> {{loop.loopname}}</a>
+                    </li>   
+                {% endfor %}   
             {% endif %}
         </ul>
     </div>

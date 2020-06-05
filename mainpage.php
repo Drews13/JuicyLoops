@@ -1,6 +1,9 @@
 <?php
 
 require_once 'vendor/autoload.php';
+require_once 'pdo.php';
+
+session_start();
 
 $loader = new Twig_Loader_Filesystem('Templates');
 $twig = new Twig_Environment($loader, array(
@@ -8,8 +11,11 @@ $twig = new Twig_Environment($loader, array(
     'auto_reload' => true
 ));
 
-$comments = array(array("author"=>"w84scaler","loop"=>"Num_15","musician"=>"Hearty D"),
-	array("author"=>"prague15031939","loop"=>"Num_15","musician"=>"Hearty D"),
-	array("author"=>"Hearty D","loop"=>"Dream_6","musician"=>"kaminari666"));
+$comments = Get10Comments($db);
+$info = Get10Loops($db, 1);
+$loops = $info[2];
 
-echo $twig->render('mainpage.html',array('comments'=>$comments));
+$twig->addGlobal('user_id', $_SESSION['user_id']);
+$twig->addGlobal('user_name', GetUserName($db, $_SESSION['user_id']));
+
+echo $twig->render('mainpage.html',array('comments'=>$comments, 'loops' => $loops));

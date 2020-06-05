@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/styles/styles.css">
+        <link rel="stylesheet" href="/styles/profile_styles.css">
+        <title>
+	    	JuicyLoops
+        </title>
+    </head>
+    <body>
+
+	{% include'header.html' %}
+
+    <div class="wrapper">
+        <div class="menu">
+            {% if user_id %}
+                <a href="profile.php?account_id={{user_id}}">My Profile</a>
+                <a href="mysettings.php">My Settigns</a>
+                <a href="upload.php">Upload</a>
+            {% endif %}    
+        </div>
+        <div class="profile_body">
+            {{user_name}}
+            <div class="user_avatar">
+                <img src="/avs/{{account_id}}.jpg" alt="avatar">
+            </div>   
+        </div>
+        {% for loop in loops %}
+            {% include 'loop_cont_form.html' with{'author_name':loop.author_name, 'loop_name':loop.loopname, 'loop_date':loop.loopdate, 'category':loop.category, 'bpm':loop.bpm, 'key':loop.keynote, 'id':loop.id, 'author_id':loop.author_id, 'description':loop.description} %}
+        {% endfor %}
+    </div>
+
+    {% include'footer.html' %}
+
+	</body>
+</html>

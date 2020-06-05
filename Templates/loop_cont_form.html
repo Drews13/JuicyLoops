@@ -1,23 +1,19 @@
-<form id="loop_cont">
+<div id="loop_cont">
     <div class="loop_cont_header">
-        <div class="user_avatar">
-            <img src="/img/unknownman.png" alt="avatar">                
+        <div class="loop_avatar">
+            <img src="/avs/{{author_id}}.jpg" alt="avatar">                
         </div>   
-        <a class="loop_title" href="mainpage.php">Num_15</a>
-        <button type="submit" id="btn_play">Play</button>
+        <a class="loop_title" href="loop_page.php?loop_id={{id}}">{{loop_name}}</a>
+        <a id="btn_play" href="{{wav_file}}" download="">Download</a>
     </div>
     <div class="loop_cont_postheader">
-        <a class="nickname" href="mainpage.php">Hearty D</a>
-        <p>18.05.2020</p>
+        <a class="nickname" href="profile.php?account_id={{author_id}}">{{author_name}}</a>
+        <p class="tags">{{loop_date}}</p>
+        <p class="tags">{{category}}</p>
+        <p class="tags">{{bpm}} bpm</p>
+        <p class="tags">Key: {{key}}</p>
     </div>
-    <div class="loop_cont_mid"></div>
-    <div class="loop_cont_bottom">
-        <div class="volume_bar"></div>
-        <div class="time">
-            <div class=current_time>00:00</div>
-            /
-            <div class=duration_time>00:00</div>
-        </div>
-        <button type="submit" class="btn_download">Download</button>
+    <div class="tags">
+        Description: {{description}}
     </div>
-</form>
+</div>

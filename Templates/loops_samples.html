@@ -19,12 +19,21 @@
         <div class="header_cont">Search for Loops</div>
         {% include 'search_for_loops_form.html' %}
 
-        {% include 'loop_cont_form.html' %}
-
-        <div class="tags">
-            Tags: 145bpm | Trap Loops | Piano | Key:Am
+        {% for loop in loops %}
+            {% include 'loop_cont_form.html' with{'author_name':loop.author_name, 'loop_name':loop.loopname, 'loop_date':loop.loopdate, 'category':loop.category, 'bpm':loop.bpm, 'key':loop.keynote, 'id':loop.id, 'author_id':loop.author_id, 'description':loop.description, 'wav_file':loop.wav_file} %}
+        {% endfor %}
+        <div class="switch_page">
+            Loops {{loopnum1}}-{{loopnum2}}
+            <div class="page_links">
+                {% if currpage != '1' %}
+                    <a href=loops_samples.php?page_id={{prevpage}} class="link"><</a>
+                {% endif %}
+                {{currpage}}
+                {% if currpage != pages_amount %}
+                    <a href=loops_samples.php?page_id={{nextpage}} class="link">></a>
+                {% endif %}      
+            </div>
         </div>
-        <div class="switch_page">Loops 1-10<div class="page_links"></div></div>
     </div>
 
     {% include'footer.html' %}

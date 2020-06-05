@@ -1,0 +1,14 @@
+.profile_body
+{
+	width: 70%;
+	min-height: calc(100vh - 254.4px);	
+	margin: 20px 20px 20px 0;
+}
+
+.user_avatar
+{
+	float: right;
+	margin: 5px;
+    max-width: 40px;
+    max-height: 40px;
+}

@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/styles/styles.css">
+        <link rel="stylesheet" href="/styles/register_styles.css">
+        <title>
+	    	JuicyLoops
+        </title>
+    </head>
+    <body>
+
+	{% include'header.html' %}	
+
+    <div id="account_page_content">
+        <div id='account_title'>
+            <h1>Register</h1>
+        </div>
+        <form class="register_form" action="register.php" method="post" enctype="multipart/form-data">
+            <div class="register_details">
+                <h2>Your Details</h2>
+                <div class="details_cont">
+                    <div class="register_input">
+                        <label>NickName</label>
+                        <input type="text" name="nickname" class="input_form">
+                    </div>
+                    <div class="register_input">
+                        <label>Email Adress</label>
+                        <input type="text" name="email" class="input_form">
+                    </div>
+                    <div class="register_input">
+                        <label>Password</label>
+                        <input type="password" name="password1" class="input_form">
+                    </div>
+                    <div class="register_input">
+                        <label>Confirm Password</label>
+                        <input type="password" name="password2" class="input_form">
+                    </div>
+                    <div class="register_input">
+                        <label>Load Avatar</label>
+                        <input type="file" name="avatar">
+                        {% if err %}
+                            <p>{{err}}</p>
+                        {% endif %}
+                    </div>
+                    <div class="register_input">
+                        <label></label>
+                        <button type="submit" class="register_button">Register</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    {% include 'footer.html' %}
+
+	</body>
+</html>

@@ -34,7 +34,11 @@
 
 #regiter_form
 {
-    padding: 0px 0px 0px 40px
+    padding: 0px 0px 0px 40px;
+    width: 48%;
+    vertical-align: top;
+    font-family: Verdana,sans-serif;
+    display: inline-block;
 }
 
 #account_content h3

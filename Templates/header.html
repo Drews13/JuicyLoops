@@ -2,9 +2,15 @@
 	<div id="headtop">
 		<div id="usermenu">
 			<a href="mainpage.php">Home</a>
-			<a href="myaccount.php">My Account</a>
-			<a href="loops_samples.php">Loops&Samples</a>
-			<a href="users.php">Users</a>
+			{% if user_id %}
+				<a href="profile.php?account_id={{user_id}}">My Account</a>
+			{% else %}
+				<a href="myaccount.php">My Account</a>
+			{% endif %}	
+			<a href="loops_samples.php?page_id=1">Loops&Samples</a>
+			{% if user_id %}
+				<a href="logout.php">Log Out</a>
+			{% endif %}					
 		</div>
 	</div>
 	<div id="headbot">
@@ -13,8 +19,8 @@
 			<div id="Juicy">Juicy</div>
 			<div id="Loops">Loops</div>
 		</a>
-		<form action="search.php" id="search">
-			<input id="search_text" type="text" placeholder="search">
+		<form action="loops_samples.php" id="search" method="get">
+			<input id="search_text" type="text" placeholder="search" name="search">
 			<button class="search_button">
 				<img src="img/glass.png" alt="glass">
 			</button>

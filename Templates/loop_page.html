@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/styles/styles.css">
+        <link rel="stylesheet" href="/styles/loops_samples_styles.css">
+        <title>
+	    	JuicyLoops
+        </title>
+    </head>
+    <body>
+
+	{% include'header.html' %}	
+
+    <div id="catalog">
+        
+        {% include 'loop_cont_form.html' with{'author_name':loop.author_name, 'loop_name':loop.loopname, 'loop_date':loop.loopdate, 'category':loop.category, 'bpm':loop.bpm, 'key':loop.keynote, 'id':loop.id, 'author_id':loop.author_id, 'description':loop.description} %}
+
+        <div class="comments_tab">
+            <div class="tab">Comments({{comments_amount}})</div>
+        </div>
+
+        {% for comment in comments %}
+            {% include 'comments_cont.html' with{'id':comment.id, 'author_id':comment.author_id, 'sample_id':comment.sample_id, 'comment_text':comment.text, 'comment_date':comment.date, 'author_name':comment.author_name} %}
+        {% endfor %}
+
+        {% if user_id %}
+            <div class="post_comment">
+                <div class="comment_title">Post A Comment</div>
+                <form class="comment_form" action="loop_page.php?loop_id={{loop.id}}" method="post">
+                    <input type="text" class="comment_input" name="com_text">
+                    <button type="submit" class="comment_button">Post A Comment</button>
+                </form>
+            </div>
+        {% endif %}    
+    </div>
+
+    {% include'footer.html' %}
+
+	</body>
+</html>

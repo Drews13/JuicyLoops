@@ -1,0 +1,65 @@
+#account_page_content
+{
+	padding: 0 30px 30px;
+	min-height: calc(100vh - 244.4px);
+}
+
+#account_title
+{
+	padding: 20px;
+}
+
+#account_page_content h1
+{
+	padding-bottom: 20px;
+    border-bottom: 1px solid #dfdfdf;
+    font-size: 21px;
+    font-family: proxima-nova-medium,sans-serif;
+}
+
+.register_details
+{
+	padding-left: 20px; 
+}
+
+#account_page_content h1
+{
+    font-size: 18px;
+    font-family: proxima-nova-medium,sans-serif;
+}
+
+.details_cont
+{
+	padding: 10px 0;
+}
+
+.register_input
+{
+	padding: 0 0 5px 0;
+}
+
+.register_input label 
+{
+    width: 10%;
+    display: inline-block;
+    line-height: 18px;
+    margin: 0;
+    vertical-align: top;
+    padding: 9px 0;
+}
+
+.input_form
+{
+	padding: 8px;
+	width: 25%;
+}
+
+.register_button
+{
+	font-size: 18px;
+	background-color: #13ce6b;
+	border: none;
+	padding: 8px;
+	width: 25%;
+	color: #FFF;
+}

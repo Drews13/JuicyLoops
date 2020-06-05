@@ -1,62 +1,28 @@
-<form class="search_for_loops">
+<form class="search_for_loops" action="loops_samples_search.php?page_id=1" method="post">
     <div class="search_table">
         <div class="search_cell1">
             <label>By Member</label>
-            <input type="search_text" placeholder="name or id">
+            <input type="search_text" placeholder="name or id" name="member">
         </div>
         <div class="search_cell2">
             <label>Category</label>
-            <select>
-                <option selected="selected">All Categories</option>
-                <option>Accordion</option>
-                <option>Arpegio</option>
-                <option>Bass</option>
-                <option>Bells</option>
-                <option>Brass</option>
-                <option>Choir</option>
-                <option>Drum</option>
-                <option>Flute</option>
-                <option>Fx</option>
-                <option>Guitar</option>
-                <option>Organ</option>
-                <option>Pad</option>
-                <option>Percussion</option>
-                <option>Piano</option>
-                <option>Strings</option>
-                <option>Synth</option>
-                <option>Violin</option>
-                <option>Vocal</option>
-            </select>
+            {% include 'category_select.html' %}
         </div>
         <div class="search_cell3">
         <label>BPM</label>
-            <input type="search_text" placeholder="from">
+            <input type="search_text" placeholder="from" name="bpm1">
         </div>
         <div class="search_cell4">
             <label></label>
-            <input type="search_text" placeholder="to">
+            <input type="search_text" placeholder="to" name="bpm2">
         </div>
         <div class="search_cell5">
             <label>Key</label>
-            <select>
-                <option selected="selected">Any key</option>
-                <option>A</option>
-                <option>A#</option>
-                <option>B</option>
-                <option>C</option>
-                <option>C#</option>
-                <option>D</option>
-                <option>D#</option>
-                <option>E</option>
-                <option>F</option>
-                <option>F#</option>
-                <option>G</option>
-                <option>G#</option>
-            </select>
+            {% include 'select_key.html'%}
         </div>
         <div class="search_cell6">
             <label>Date</label>
-            <select>
+            <select name="date">
                 <option selected="selected">Any Date</option>
                 <option>Last 24 Hours</option>
                 <option>Last 7 days</option>
@@ -66,11 +32,11 @@
         </div>
         <div class="search_cell7">
             <label>By KeyWord</label>
-            <input type="search_text" placeholder="KeyWord">
+            <input type="search_text" placeholder="KeyWord" name="keyword">
         </div>
         <div class="search_cell8">
             <label>Order by</label>
-            <select>
+            <select name="orderby">
                 <option selected="selected">Date</option>
                 <option>Title</option>
                 <option>Authot</option>
@@ -81,7 +47,7 @@
         </div>
         <div class="search_cell9">
             <label></label>
-            <select>
+            <select name="order">
                 <option selected="selected">Desc</option>
                 <option>Asc</option>                    
             </select>
